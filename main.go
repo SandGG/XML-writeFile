@@ -21,22 +21,12 @@ type subjects struct {
 }
 
 func main() {
-	createFile()
 	writeFile()
 	readFile()
 }
 
-func createFile() {
-	var file, err = os.Create("./files/teachers.xml")
-	defer file.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println("File Created Successfully")
-}
-
 func writeFile() {
-	var file, err = os.OpenFile("./files/teachers.xml", os.O_WRONLY, 0644)
+	var file, err = os.OpenFile("./files/teachers.xml", os.O_WRONLY|os.O_CREATE, 0644)
 	defer file.Close()
 	if err != nil {
 		log.Fatal(err)
@@ -78,7 +68,7 @@ func writeFile() {
 		},
 	}
 
-	var b, errC = xml.MarshalIndent(teachers, "", " ")
+	var b, errC = xml.MarshalIndent(teachers, " ", " ")
 	if errC != nil {
 		log.Fatal(errC)
 	}
