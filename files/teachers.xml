@@ -1,0 +1,27 @@
+<teacher>
+ <name>Maria Cuevas</name>
+ <age>35</age>
+ <salary>190</salary>
+ <subjects>
+  <name>Spanish</name>
+  <group>1A</group>
+ </subjects>
+</teacher>
+<teacher>
+ <name>Nicolas Chaves</name>
+ <age>40</age>
+ <salary>150</salary>
+ <subjects>
+  <name>Physical</name>
+  <group>4B</group>
+ </subjects>
+</teacher>
+<teacher>
+ <name>Fernanda Suarez</name>
+ <age>39</age>
+ <salary>140</salary>
+ <subjects>
+  <name>Math</name>
+  <group>3A</group>
+ </subjects>
+</teacher>
